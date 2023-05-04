@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       var jsonResponse = json.decode(response.body);
       setState(() {
         countryData = jsonResponse[0];
-        var countryCode = countryData['cca2'].toLowerCase();
+        var countryCode = countryData['cca2'].toUpperCase();
         flagUrl = 'https://flagsapi.com/$countryCode/flat/64.png';
       });
     } else {
